@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddForce(-directionalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
+        if (rb.position.y < -1)
+        {
+            FindObjectOfType<GameMan>().EndGame();
+        }
 
 
     }

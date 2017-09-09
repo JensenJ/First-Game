@@ -3,6 +3,7 @@
 public class PlayerCollision : MonoBehaviour{
 
     public PlayerMovement movement;
+    
 
     void OnCollisionEnter (Collision collisionInfo)
     {
@@ -10,6 +11,8 @@ public class PlayerCollision : MonoBehaviour{
         {
         Debug.Log("We hit an obstacle");
             movement.enabled = false;
+            FindObjectOfType<GameMan>().EndGame();
+            
         }
     }
 }
