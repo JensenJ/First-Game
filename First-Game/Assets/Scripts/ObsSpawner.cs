@@ -13,16 +13,19 @@ public class ObsSpawner : MonoBehaviour
 
     public float spawnRate = 10f;
 
-    //void Update()
-    //{
-    //    if (Time.time >= timeToSpawn)
-    //    {
-    //        SpawnBlocks();
-    //        timeToSpawn = Time.time + spawnRate;
-    //    }
-    //}
+    
 
-    void Start()
+    void Update()
+    {
+        if (Time.time >= timeToSpawn)
+        {
+            SpawnBlocks();
+            transform.Translate(0, 0, 160);
+            timeToSpawn = Time.time + spawnRate;
+        }
+    }
+
+    void SpawnBlocks()
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);
 
