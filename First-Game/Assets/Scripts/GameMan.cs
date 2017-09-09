@@ -5,6 +5,7 @@ public class GameMan : MonoBehaviour
 {
 
     bool gameHasEnded = false;
+    public float restartDelay = 1f;
 
     public void EndGame()
     {
@@ -12,7 +13,8 @@ public class GameMan : MonoBehaviour
         {
         gameHasEnded = true;
         Debug.Log("Game Over");
-        Restart();
+        Invoke("Restart", restartDelay);
+        
         }
     }
     void Restart()
