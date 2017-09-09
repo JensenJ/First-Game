@@ -18,11 +18,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKey("d")) // Check for input when pressing "d"
         {
-            rb.AddForce(directionalForce * Time.deltaTime, 0, 0);
+            rb.AddForce(directionalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("a")) // Check for input when pressing "a"
         {
-            rb.AddForce(-directionalForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-directionalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
 
