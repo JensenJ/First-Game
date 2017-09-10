@@ -4,9 +4,20 @@ using UnityEngine;
 public class Score : MonoBehaviour {
 
     public Transform player;
-    public Text scoreText;
+    public Text score;
+    public Text highScore;
+
 	// Update is called once per frame
 	void Update () {
-       scoreText.text = player.position.z.ToString("0");//writes score to the screen
+        //int number = Random.Range(1, 7);
+        int number = player.position.z("0");
+        score.text = number.ToString();
+        
+
+        PlayerPrefs.SetInt("HighScore", number);
 	}
+    void Start()
+    {
+        highScore.text = PlayerPrefs.GetInt("HighScore").ToString;
+    }
 }
