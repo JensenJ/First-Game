@@ -7,17 +7,11 @@ public class Score : MonoBehaviour {
     public Text score;
     public Text highScore;
 
-	// Update is called once per frame
-	void Update () {
-        //int number = Random.Range(1, 7);
-        int number = player.position.z("0");
-        score.text = number.ToString();
-        
-
-        PlayerPrefs.SetInt("HighScore", number);
-	}
-    void Start()
+    // Update is called once per frame
+    void Update()
     {
-        highScore.text = PlayerPrefs.GetInt("HighScore").ToString;
+        //int number = Random.Range(1, 101);
+        int number = (int)player.position.z;
+        score.text = number.ToString();
     }
 }
