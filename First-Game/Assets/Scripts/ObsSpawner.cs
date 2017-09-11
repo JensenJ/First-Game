@@ -28,7 +28,7 @@ public class ObsSpawner : MonoBehaviour
     }
     void OnTriggerEnter()// when the player enters the trigger box
     {
-        SpawnBlocks(); //calls spawn blocks method
+        //SpawnBlocks(); //calls spawn blocks method
         transform.Translate(0, 0, 45); //moves spawners and trigger forward
         floorInstance = (GameObject)Instantiate(floorPrefab, floorSpawnPoint.position, Quaternion.identity); // spawns the floor in for the next wave
         Destroy(floorInstance, 5);
