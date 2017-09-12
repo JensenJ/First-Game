@@ -19,5 +19,6 @@ public class GameMan : MonoBehaviour //Game Manager class
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);// Restarts the level
+        
     }
 }

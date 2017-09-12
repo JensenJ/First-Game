@@ -15,7 +15,7 @@ public class ChangeBGColour : MonoBehaviour {
     public Color color5;
     public Color color6;
     private float colorStart = 0f;
-    private float colorCooldown = 30f;
+    public float colorCooldown = 20f;
 
     Camera cam;
 
